@@ -45,7 +45,7 @@ app.post('/send-email', (req, res) => {
 });
 
 app.get('/stats', (req, res)=>{
-  console.log('test pls pls pls pls');
+  console.log(__dirname + '\\html\\images');
     res.status(200).send('ESTO ES UN TEST !@#');
 });
 
