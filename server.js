@@ -57,13 +57,7 @@ app.post("/send-email24", (req, res) => {
     to: 'axel.bon.cc@gmail.com',
     text: 'This is some text',
     // html: '<p>This is some HTML</p>',
-    html: '123123',
-    subject: 'First HTML Newsletter',
-    list: {
-        unsubscribe: {
-            url: `${process.env.UNSUBSCRIBEURL}${process.env.TO}`
-        }
-    }
+
   };
 
   var smtpTransporter = nodemailer.createTransport({
