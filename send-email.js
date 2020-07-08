@@ -7,36 +7,9 @@ AWS.config.update({
 
 // Create sendEmail params 
 var params = {
-    Destination: { /* required */
-        ToAddresses: [
-            "axel.bon.cc@gmail.com",
-            /* more items */
-        ]
-    },
-    Message: { /* required */
-        Body: { /* required */
-            Html: {
-                Charset: "UTF-8",
-                Data: "This message body contains HTML formatting. It can, for example, contain links like this one: <a class=\"ulink\" href=\"http://docs.aws.amazon.com/ses/latest/DeveloperGuide\" target=\"_blank\">Amazon SES Developer Guide</a>."
-            },
-            Text: {
-                Charset: "UTF-8",
-                Data: "This is the message body in text format."
-            }
-        },
-        Subject: {
-            Charset: 'UTF-8',
-            Data: 'Test email'
-        }
-    },
-    ReplyToAddresses: [
-    ],
-    Source: "axel.bon-@hotmail.com",
-};
-
-var ses = new AWS.SES();
-
-ses.sendEmail(params, function (err, data) {
+    TemplateName: 'testtemplate' /* required */
+  };
+  ses.getTemplate(params, function(err, data) {
     if (err) console.log(err, err.stack); // an error occurred
-    else console.log(data);           // successful response
-});
+    else     console.log(data);           // successful response
+  });
