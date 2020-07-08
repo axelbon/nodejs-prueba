@@ -8,10 +8,6 @@ AWS.config.update({
 // Create sendEmail params 
 var params = {
     Destination: { /* required */
-        BccAddresses: [
-        ],
-        CcAddresses: [
-        ],
         ToAddresses: [
             "axel.bon.cc@gmail.com",
             /* more items */
@@ -35,15 +31,12 @@ var params = {
     },
     ReplyToAddresses: [
     ],
-    ReturnPath: "",
-    ReturnPathArn: "",
     Source: "axel.bon-@hotmail.com",
-    SourceArn: "",
 };
 
 var ses = new AWS.SES();
 
 ses.sendEmail(params, function (err, data) {
-    if (err) console.log(err, err.stack); // an error occurred
+    if (err) console.log('error'); // an error occurred
     else console.log(data);           // successful response
 });
