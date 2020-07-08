@@ -13,7 +13,7 @@ var params = {
         CcAddresses: [
         ],
         ToAddresses: [
-            'axel.bon.cc@gmail.com',
+            "axel.bon.cc@gmail.com",
             /* more items */
         ]
     },
