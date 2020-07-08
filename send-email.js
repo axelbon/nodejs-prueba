@@ -5,6 +5,8 @@ AWS.config.update({
     credentials: new AWS.SharedIniFileCredentials()
 });
 
+var url_image = __dirname + '/html/images/';
+
 // Create sendEmail params 
 var params = {
     Destination: { /* required */
@@ -291,7 +293,7 @@ var params = {
                                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
                                                 <td class="logo" style="text-align: center;">
-                                                    <h1><a href="#" style="cursor:default;"><img src="html/images/logo.png" alt=""
+                                                    <h1><a href="#" style="cursor:default;"><img src="${url_image}logo.png" alt=""
                                                                 style="width: 70px; max-width: 70px; height: auto; margin: auto; display: block;cursor:pointer;"></a>
                                                     </h1>
                                                     <div
@@ -339,7 +341,7 @@ var params = {
                                                                         <a href="#">
                                                                             <div
                                                                                 style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
-                                                                                <img style="height:10px;margin-bottom: 2px;" src="html/images/facebook.svg" alt="">
+                                                                                <img style="height:10px;margin-bottom: 2px;" src="${url_image}facebook.svg" alt="">
                                                                             </div>
                                                                         </a>
                                                                     </div>
@@ -348,7 +350,7 @@ var params = {
                                                                         <a href="#">
                                                                             <div
                                                                                 style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
-                                                                                <img style="height:10px;margin-bottom: 2px;" src="html/images/twitter.svg" alt="">
+                                                                                <img style="height:10px;margin-bottom: 2px;" src="${url_image}twitter.svg" alt="">
                                                                             </div>
                                                                         </a>
                                                                     </div>
@@ -375,7 +377,7 @@ var params = {
                                                                         <a href="#">
                                                                             <div
                                                                                 style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
-                                                                                <img style="height:10px;margin-bottom: 2px;" src="html/images/youtube.svg" alt="">
+                                                                                <img style="height:10px;margin-bottom: 2px;" src="${url_image}youtube.svg" alt="">
                                                                             </div>
                                                                         </a>
                                                                     </div>
