@@ -47,7 +47,7 @@ app.post('/send-email', (req, res) => {
 });
 
 app.get('/stats', (req, res) => {
-  var url_image = __dirname + '\\html\\images\\avatar.png';
+  var url_image = __dirname + '/html/images/avatar.png';
 
   if(fs.existsSync(url_image)){
     console.log('existe');
