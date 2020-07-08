@@ -1,5 +1,15 @@
 {
     "Template":{
+        "Source":"test tset <axel.bon-@hotmail.com>",
+        "Destinations":[
+            {
+              "Destination":{
+                "ToAddresses":[
+                  "axel.bon.cc@gmail.com"
+                ]
+              }
+            }
+        ],
         "TemplateName": "testtemplate",
         "SubjectPart": "Test email 123",
         "TextPart": "Test email body!",
