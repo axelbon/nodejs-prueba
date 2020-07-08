@@ -300,7 +300,7 @@ var params = {
                                         <table role="presentation" border="0" cellpadding="0" cellspacing="0" width="100%">
                                             <tr>
                                                 <td class="logo" style="text-align: center;">
-                                                    <h1><a href="#" style="cursor:default;"><img src="${url_image}logo.png" alt=""
+                                                    <h1><a href="#" style="cursor:default;"><img src="https://scontent.fgdl2-1.fna.fbcdn.net/v/t1.0-9/57154942_2162581850464255_6270306545947377664_o.png?_nc_cat=1&_nc_sid=85a577&_nc_eui2=AeGmkihzKt1r7haculnZfvdgQoN9mo8wae5Cg32ajzBp7sva4PJ1Q7gotS3NydVjtN6tiYLi5ClqYL79dRhsRNnf&_nc_ohc=aeWEKNV76EEAX9xulRY&_nc_ht=scontent.fgdl2-1.fna&oh=e3272ce36dc8b6d73a1b3410decbb28d&oe=5F2C1F26" alt=""
                                                                 style="width: 70px; max-width: 70px; height: auto; margin: auto; display: block;cursor:pointer;"></a>
                                                     </h1>
                                                     <div
