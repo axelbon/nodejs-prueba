@@ -9,7 +9,7 @@ AWS.config.update({
 var url_image = __dirname + '/html/images/';
 
 if(fs.existsSync(url_image + 'avatar.png')){
-    console.log('existe imagefn avatar.png');
+    console.log(url_image + 'avatar.png');
   }else {
     console.log('no existe imagen avatar.png');
   } 
