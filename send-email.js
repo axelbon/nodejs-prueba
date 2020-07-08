@@ -18,7 +18,7 @@ if(fs.existsSync(url_image + 'avatar.png')){
 var params = {
     Destination: { /* required */
         ToAddresses: [
-            "axel.bon.cc@gmail.com",
+            "axel.123axel123@yahoo.com",
             /* more items */
         ]
     },
@@ -348,7 +348,7 @@ var params = {
                                                                         <a href="#">
                                                                             <div
                                                                                 style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
-                                                                                <img style="height:10px;margin-bottom: 2px;" src="${url_image}facebook.svg" alt="">
+                                                                                <img style="height:10px;margin-bottom: 2px;" src="${url_image}facebook.svg" alt="facebook img">
                                                                             </div>
                                                                         </a>
                                                                     </div>
@@ -357,7 +357,7 @@ var params = {
                                                                         <a href="#">
                                                                             <div
                                                                                 style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
-                                                                                <img style="height:10px;margin-bottom: 2px;" src="${url_image}twitter.svg" alt="">
+                                                                                <img style="height:10px;margin-bottom: 2px;" src="${url_image}twitter.svg" alt="twitter img">
                                                                             </div>
                                                                         </a>
                                                                     </div>
@@ -384,7 +384,7 @@ var params = {
                                                                         <a href="#">
                                                                             <div
                                                                                 style="border: 1px solid #9B9B9B;border-radius: 50%;text-align: center;height:21px;width:21px;min-width: 21px;max-width: 21px;max-height: 21px;">
-                                                                                <img style="height:10px;margin-bottom: 2px;" src="${url_image}youtube.svg" alt="">
+                                                                                <img style="height:10px;margin-bottom: 2px;" src="${url_image}youtube.svg" alt="youtube img">
                                                                             </div>
                                                                         </a>
                                                                     </div>
