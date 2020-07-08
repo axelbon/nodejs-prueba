@@ -1,10 +1,14 @@
 var AWS = require('aws-sdk');
 // Set the region 
-AWS.config.update({ region: 'REGION' });
+AWS.config.update({ region: 'us-east-2' });
 
 // Create sendEmail params 
 var params = {
     Destination: { /* required */
+        BccAddresses: [
+        ],
+        CcAddresses: [
+        ],
         ToAddresses: [
             'axel.bon.cc@gmail.com',
             /* more items */
@@ -14,11 +18,11 @@ var params = {
         Body: { /* required */
             Html: {
                 Charset: "UTF-8",
-                Data: "HTML_FORMAT_BODY"
+                Data: "This message body contains HTML formatting. It can, for example, contain links like this one: <a class=\"ulink\" href=\"http://docs.aws.amazon.com/ses/latest/DeveloperGuide\" target=\"_blank\">Amazon SES Developer Guide</a>."
             },
             Text: {
                 Charset: "UTF-8",
-                Data: "TEXT_FORMAT_BODY"
+                Data: "This is the message body in text format."
             }
         },
         Subject: {
@@ -26,21 +30,15 @@ var params = {
             Data: 'Test email'
         }
     },
-    Source: 'axel.bon-@hotmail.com', /* required */
     ReplyToAddresses: [
-        'EMAIL_ADDRESS',
-        /* more items */
     ],
+    ReturnPath: "",
+    ReturnPathArn: "",
+    Source: "axel.bon-@hotmail.com",
+    SourceArn: "",
 };
 
-// Create the promise and SES service object
-var sendPromise = new AWS.SES({ apiVersion: '2010-12-01' }).sendEmail(params).promise();
-
-// Handle promise's fulfilled/rejected states
-sendPromise.then(
-    function (data) {
-        console.log(data.MessageId);
-    }).catch(
-        function (err) {
-            console.error(err, err.stack);
-        });
+ses.sendEmail(params, function (err, data) {
+    if (err) console.log(err, err.stack); // an error occurred
+    else console.log(data);           // successful response
+});
