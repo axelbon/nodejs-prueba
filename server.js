@@ -1,16 +1,21 @@
-require('rootpath')();
-
+var aws = require('aws-sdk');
 var nodemailer = require('nodemailer');
 var express = require('express');
 
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-var app = express();
+var app = express(), simpledb;
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
+
+aws.config.loadFromPath('config.json');
+simpledb = new aws.SimpleDB({
+  region        : 'US-East',
+  endpoint  : 'https://sdb.amazonaws.com'
+});
 
 app.post('/send-email', (req, res) => {
     console.log(req.body);
