@@ -79,7 +79,7 @@ app.post("/send-email24", (req, res) => {
   smtpTransporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.log('ddfffdopfdzofziuyiuyxc');
-      res.status(error.responseCode).send(error.response);
+      res.status(500).send(error.response);
     } else {
       console.log('Message sent: ' + info.response);
       res.status(200).send(info);
