@@ -40,8 +40,8 @@ app.get('/stats', (req, res)=>{
     res.status(200).send('ESTO ES UN TEST !@#');
 });
 
-app.listen(5000, () => {
-    console.log('servidor en -> http://localhost:5000');
+app.listen(5000, (req) => {
+    console.log(req.headers.host + '/' + req.url);
 });
 
 
