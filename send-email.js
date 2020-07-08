@@ -7,7 +7,7 @@ AWS.config.update({
 
 // Create sendEmail params 
 var params = {
-    TemplateName: 'testtemplate' /* required */
+    TemplateName: 'testtemplate2' /* required */
 };
 
 var ses = new AWS.SES();
