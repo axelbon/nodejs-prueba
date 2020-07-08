@@ -41,7 +41,7 @@ app.get('/stats', (req, res)=>{
 });
 
 app.listen(5000, (req) => {
-    console.log(req.headers.host + '/' + req.url);
+    console.log('test');
 });
 
 
