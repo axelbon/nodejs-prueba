@@ -48,7 +48,7 @@ app.get('/stats', (req, res)=>{
     res.status(200).send('ESTO ES UN TEST !@#');
 });
 
-const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
+const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 3100;
 console.log(port);
 const server = app.listen(port, () => {
     console.log('Server listening on port ' + port);
