@@ -1,7 +1,16 @@
+require('rootpath')();
+
 var nodemailer = require('nodemailer');
 var express = require('express');
+
+const cors = require('cors');
+const bodyParser = require('body-parser');
+
 var app = express();
-app.use(express.json());
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(cors());
 
 app.post('/send-email', (req, res) => {
     console.log(req.body);
@@ -40,8 +49,10 @@ app.get('/stats', (req, res)=>{
     res.status(200).send('ESTO ES UN TEST !@#');
 });
 
-app.listen(5000, (req) => {
-    console.log('test');
+const port = process.env.NODE_ENV === 'production' ? (process.env.PORT || 80) : 4000;
+console.log(port);
+const server = app.listen(port, () => {
+    console.log('Server listening on port ' + port);
 });
 
 
