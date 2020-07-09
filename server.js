@@ -21,6 +21,10 @@ app.use(cors());
 
 app.post('/send-email', (req, res) => {
 
+  if(!req.body.emailAddress){
+    res.status(500).send('necesitas agregar un correo');
+  }
+
   var url_image = __dirname + '/html/images/';
 
   var params = {
@@ -463,14 +467,17 @@ app.post('/send-email', (req, res) => {
     },
     ReplyToAddresses: [
     ],
-    Source: "email_sender_nodejs_teamknow@yahoo.com",
+    Source: "axel.bon.cc@gmail.com",
   };
 
   var ses = new AWS.SES();
 
   ses.sendEmail(params, function (err, data) {
-    if (err) console.log(err, err.stack); // an error occurred
-    else console.log(data);           // successful response
+    if (err){
+      console.log(err, err.stack); // an error occurred\
+      res.status(500).send('Error al enviar el corre', err.message);
+    }
+    res.status(200).send('Correo enviado corectamente');
   });
 
 
