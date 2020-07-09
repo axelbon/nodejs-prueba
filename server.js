@@ -19,11 +19,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 
-app.post('/test-post', (req, res) => {
-  console.log(req.body.emailAddress);
-})
-
-
 app.post('/send-email', (req, res) => {
 
   var url_image = __dirname + '/html/images/';
@@ -468,7 +463,7 @@ app.post('/send-email', (req, res) => {
     },
     ReplyToAddresses: [
     ],
-    Source: "axel.bon-@hotmail.com",
+    Source: "email_sender_nodejs_teamknow@yahoo.com",
   };
 
 
