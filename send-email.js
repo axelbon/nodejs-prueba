@@ -1,5 +1,4 @@
 var AWS = require('aws-sdk');
-const fs = require('fs');
 // Set the region 
 AWS.config.update({
     region: 'us-east-2',
@@ -7,12 +6,6 @@ AWS.config.update({
 });
 
 var url_image = __dirname + '/html/images/';
-
-if(fs.existsSync(url_image + 'avatar.png')){
-    console.log(url_image + 'avatar.png');
-  }else {
-    console.log('no existe imagen avatar.png');
-  } 
 
 // Create sendEmail params 
 var params = {
